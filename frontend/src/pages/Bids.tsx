@@ -2,13 +2,13 @@
 
 // import { FaLaugh, FaChalkboardTeacher } from 'react-icons/fa';
 
-function Bid() {
+function Bids() {
   return (
     <>
       <section className="heading">
-        <h1>Bid</h1>
+        <h1>Bids</h1>
       </section>
     </>
   );
 }
-export default Bid;
+export default Bids;

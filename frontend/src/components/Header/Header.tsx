@@ -16,8 +16,8 @@ export function Header() {
           </Link>
         </li>
         <li className="nav-item">
-          <Link to="/bid" className="nav-link">
-            <ImHammer2 className="icon" /> Bid
+          <Link to="/bids" className="nav-link">
+            <ImHammer2 className="icon" /> Bids
           </Link>
         </li>
         <li className="nav-item">
