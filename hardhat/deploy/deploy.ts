@@ -15,7 +15,7 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
     log: true,
   });
 
-  console.log(`MyConfidentialERC20 contract: `, deployed.address);
+  console.log(`***** MyConfidentialERC20 contract: `, deployed.address);
   if (isNewDeployment) {
     const signers = await hre.ethers.getSigners();
     const alice = signers[0];
