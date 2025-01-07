@@ -3,7 +3,7 @@ import { Devnet } from './components/Devnet';
 import Home from './pages/Home';
 import { Header } from './components/Header';
 import { CreateERC20 } from './pages/CreateERC20';
-import Bid from './pages/Bid';
+import Bids from './pages/Bids';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import { init } from './fhevmjs';
@@ -30,7 +30,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/createERC20" element={<CreateERC20 />}></Route>
-          <Route path="/bid" element={<Bid />}></Route>
+          <Route path="/bids" element={<Bids />}></Route>
           <Route
             path="/example"
             element={
