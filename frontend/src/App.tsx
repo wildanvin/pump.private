@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Devnet } from './components/Devnet';
 import Home from './pages/Home';
 import { Header } from './components/Header';
-import CreateERC20 from './pages/CreateERC20';
+import { CreateERC20 } from './pages/CreateERC20';
 import Bid from './pages/Bid';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
