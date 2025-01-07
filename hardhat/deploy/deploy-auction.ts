@@ -12,7 +12,7 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
     log: true,
   });
 
-  console.log(`MyConfidentialERC20 contract: `, tokenDeployed.address);
+  console.log(`--------- MyConfidentialERC20 contract from Auction: `, tokenDeployed.address);
 
   // Configuramos los parámetros para la subasta
   const biddingTime = 7 * 24 * 60 * 60; // 1 semana en segundos
@@ -25,7 +25,7 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
     log: true,
   });
 
-  console.log(`BlindAuction contract: `, auctionDeployed.address);
+  console.log(`------ BlindAuction contract: `, auctionDeployed.address);
 };
 
 export default func;
