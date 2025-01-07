@@ -4,6 +4,7 @@ import './CreateERC20.css';
 interface FormData {
   name: string;
   symbol: string;
+  supply: string;
   purpose: string;
 }
 
@@ -11,6 +12,7 @@ export function CreateERC20(): JSX.Element {
   const [formData, setFormData] = useState<FormData>({
     name: '',
     symbol: '',
+    supply: '',
     purpose: '',
   });
 
@@ -54,6 +56,19 @@ export function CreateERC20(): JSX.Element {
           value={formData.symbol}
           onChange={handleChange}
           placeholder="Enter symbol"
+        />
+      </div>
+      <div className="input-group">
+        <label className="label" htmlFor="supply">
+          Supply:
+        </label>
+        <input
+          className="input"
+          type="text"
+          id="supply"
+          value={formData.supply}
+          onChange={handleChange}
+          placeholder="Enter supply"
         />
       </div>
       <div>
