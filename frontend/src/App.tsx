@@ -3,6 +3,7 @@ import { Devnet } from './components/Devnet';
 import Home from './pages/Home';
 import { Header } from './components/Header';
 import { CreateERC20 } from './pages/CreateERC20';
+import { IndividualBid } from './pages/IndividualBid';
 import Bids from './pages/Bids';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
@@ -31,6 +32,7 @@ function App() {
           <Route path="/" element={<Home />}></Route>
           <Route path="/createERC20" element={<CreateERC20 />}></Route>
           <Route path="/bids" element={<Bids />}></Route>
+          <Route path="/bid/:address" element={<IndividualBid />}></Route>
           <Route
             path="/example"
             element={
