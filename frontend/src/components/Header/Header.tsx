@@ -25,6 +25,11 @@ export function Header() {
             Example
           </Link>
         </li>
+        <li className="nav-item">
+          <Link to="/counter2" className="nav-link">
+            Counter2
+          </Link>
+        </li>
       </ul>
     </header>
   );

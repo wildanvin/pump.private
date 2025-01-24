@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Devnet } from './components/Devnet';
+import { Counter2 } from './components/Counter2';
 import Home from './pages/Home';
 import { Header } from './components/Header';
 import { CreateERC20 } from './pages/CreateERC20';
@@ -33,6 +34,7 @@ function App() {
           <Route path="/createERC20" element={<CreateERC20 />}></Route>
           <Route path="/bids" element={<Bids />}></Route>
           <Route path="/bid/:address" element={<IndividualBid />}></Route>
+          <Route path="/counter2" element={<Counter2 />}></Route>
           <Route
             path="/example"
             element={
