@@ -34,7 +34,20 @@ function App() {
           <Route path="/createERC20" element={<CreateERC20 />}></Route>
           <Route path="/bids" element={<Bids />}></Route>
           <Route path="/bid/:address" element={<IndividualBid />}></Route>
-          <Route path="/counter2" element={<Counter2 />}></Route>
+          <Route
+            path="/counter2"
+            element={
+              <Connect>
+                {(account, provider, readOnlyProvider) => (
+                  <Counter2
+                    account={account}
+                    provider={provider}
+                    readOnlyProvider={readOnlyProvider}
+                  />
+                )}
+              </Connect>
+            }
+          ></Route>
           <Route
             path="/example"
             element={
