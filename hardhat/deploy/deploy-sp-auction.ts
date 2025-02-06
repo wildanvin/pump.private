@@ -1,5 +1,6 @@
 import { DeployFunction } from "hardhat-deploy/types";
 import { HardhatRuntimeEnvironment } from "hardhat/types";
+import { start } from "repl";
 
 const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   const { deployer } = await hre.getNamedAccounts();
@@ -32,6 +33,12 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   });
 
   console.log(`Auction contract deployed at: `, spAuctionDeployed.address);
+
+  const spAuctionFactory = await hre.ethers.getContractFactory("ImprovedSinglePriceAuction2");
+  const spAuction = spAuctionFactory.attach(spAuctionDeployed.address);
+  const startAuction = await spAuction.startAuction();
+  await startAuction.wait();
+  console.log(`Auction started`);
 };
 
 export default func;
