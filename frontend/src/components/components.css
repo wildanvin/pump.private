@@ -1,0 +1,102 @@
+/* IndividualBid.css */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 450px;
+  margin: 50px auto;
+  padding: 25px;
+  border: 2px solid #000;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.address {
+  font-size: 16px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.label {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.input {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #333;
+}
+
+.input:focus {
+  border-color: #007bff;
+  outline: none;
+  background-color: #eef;
+}
+
+.total {
+  font-size: 16px;
+  font-weight: bold;
+  color: #007bff;
+  margin-top: 8px;
+}
+
+.button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  transition:
+    background-color 0.3s,
+    transform 0.2s;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+.button:active {
+  background-color: #003f7f;
+  transform: scale(0.98);
+}
+
+/* New CSS for handling long strings */
+.encryption-details {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.encryption-details div {
+  word-wrap: break-word; /* Ensure long strings wrap */
+  overflow-wrap: break-word; /* Alternative for better browser support */
+  white-space: pre-wrap; /* Preserve whitespace but allow wrapping */
+  font-family: monospace; /* Use monospace font for better readability */
+  font-size: 12px; /* Smaller font size for long strings */
+  color: #555; /* Slightly lighter color for less visual weight */
+  background-color: #f0f0f0; /* Light background for better contrast */
+  padding: 8px;
+  border-radius: 5px;
+  margin-bottom: 8px;
+}

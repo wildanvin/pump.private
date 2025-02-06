@@ -29,6 +29,11 @@ export function Header() {
           <Link to="/counter2" className="nav-link">
             Counter2
           </Link>
+          <li className="nav-item">
+            <Link to="/sp-auction" className="nav-link">
+              SPAuction
+            </Link>
+          </li>
         </li>
       </ul>
     </header>

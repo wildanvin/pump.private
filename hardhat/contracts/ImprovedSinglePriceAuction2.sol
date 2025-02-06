@@ -151,8 +151,7 @@ contract ImprovedSinglePriceAuction2 is
     function placeBid(
         einput quantityInput,
         einput priceInput,
-        bytes calldata quantityProof,
-        bytes calldata priceProof
+        bytes calldata inputProof
     ) external payable {
         require(auctionState == AuctionState.Active, "Not active");
         require(block.timestamp < endTime, "Auction ended");
@@ -163,8 +162,8 @@ contract ImprovedSinglePriceAuction2 is
                 "Cannot place bid");
 
         // Convert and validate inputs
-        euint64 quantity = TFHE.asEuint64(quantityInput, quantityProof);
-        euint64 price = TFHE.asEuint64(priceInput, priceProof);
+        euint64 quantity = TFHE.asEuint64(quantityInput, inputProof);
+        euint64 price = TFHE.asEuint64(priceInput, inputProof);
         euint64 timestamp = TFHE.asEuint64(block.timestamp);
 
         // Validate bid size
